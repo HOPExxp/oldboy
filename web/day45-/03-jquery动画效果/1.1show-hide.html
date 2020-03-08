@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>显示、隐藏</title>
+        <style type="text/css">
+            #box{
+                width: 200px;
+                height: 200px;
+                background-color: green;
+                border: 1px solid red;
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="box">
+        </div>
+        <button id="btn">隐藏</button>
+    </body>
+    <script src="jquery.min.js"></script>
+
+    <script type="text/javascript">
+
+        //jquery 提供了一些方法 show() hide() 控制元素显示隐藏
+        var isShow = true;
+        $('#btn').click(function(){
+            if(isShow){
+                $('#box').show('slow',function(){
+                    $(this).text('盒子出来了');
+                    $('#btn').text('显示');
+                    isShow = false;
+                })
+            }else{
+                $('#box').hide(2000,function(){
+                    $(this).text('');
+                    $('#btn').text('隐藏');
+                    isShow = true;
+
+                })
+            }
+        })
+
+
+    </script>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <p>这是一个段落</p>
+    <script src="jquery.min.js"></script>
+    <script>
+        var foo = function () {
+            //绑定与解绑事件的处理函数
+            alert('解绑');
+        };
+        $("p").bind("click mouseenter",foo);
+        $("p").unbind("mouseenter",foo);
+    </script>
+</body>
+</html>

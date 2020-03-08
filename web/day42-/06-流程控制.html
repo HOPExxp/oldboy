@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>流程控制</title>
+</head>
+<body>
+<script>
+    //  ------------while
+    // var i =2;
+    // while (i <= 100){
+    //     console.log(i);
+    //     i += 2
+    // }
+
+    //---------------------do...while
+    // var i = 3;//初始化循环变量
+    // do{
+    //
+    //     console.log(i);
+    //     i++;//更新循环条件
+    //
+    // }while (i<1) //判断循环条件
+
+    //------------for
+    // for(var i=1;i<=100;i++){
+    //     if(i%2 == 0){
+    //         console.log(i)
+    //     }
+    // }
+
+    //-------------------双重for
+    // for(var i=1;i<=3;i++){
+    //
+    //     for (var j = 0; j < 6; j++) {
+    //         document.write('*')
+    //     }
+    //
+    //     document.write('<br>')
+    // }
+
+    //--------------双重for实现三角形输出
+    for(var i=1;i<=6;i++){  //行数
+        for(var j=1;j<=(6 -i);j++){
+            document.write('&nbsp')
+        }
+        for(var k=1;k<=(2*i - 1);k++){
+            document.write('*')
+        }
+        // for(var j=1;j<=(6 -i);j++){
+        //     document.write(' ')
+        // }
+        document.write('<br>')
+    }
+</script>
+</body>
+</html>

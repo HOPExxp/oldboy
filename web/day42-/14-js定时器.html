@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>定时器</title>
+</head>
+<body>
+<script>
+    // function hello() {
+    //     alert("hello");
+    // }
+    //
+    // //定时器1-- setTimeout()  --  只在指定时间后执行一次
+    // //使用方法名执行方法，不用带括号，秒数单位为ms
+    // var t1 = window.setTimeout(hello,1000);
+    // var t2 = window.setTimeout("hello()",3000);
+    // window.clearTimeout(t1);//去掉定时器
+
+    //定时器2 -- setInterval()  --  以指定时间周期执行
+    function refreshQuery() {
+        console.log("每4秒调一次")
+    }
+    setInterval("refreshQuery()",4000)
+</script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>模拟对话框啊</title>
+    <style>
+        .hidden{
+            display: none;
+        }
+        .aa{
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left:0;
+            right: 0;
+            background-color: grey;
+            /*opacity: 0.4;*/
+        }
+        .bb{
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            margin-left: -100px;
+            margin-top: -100px;
+            height: 200px;
+            width: 200px;
+            background-color: wheat;
+        }
+    </style>
+</head>
+<body>
+
+<div style="height: 2000px;background-color: white">
+    <input type="button" value="click">
+</div>
+<div class="aa setting hidden"></div>
+<div class="bb setting hidden">
+    <input type="button" value="back">
+</div>
+
+<script>
+    var bts = document.getElementsByTagName("input");
+    var hids = document.getElementsByClassName("setting");
+    for (i=0;i<bts.length;i++) {
+        bts[i].onclick = function () {
+            if (this.value == "click") {
+                for (j = 0; j < hids.length; j++) {
+                    hids[j].classList.remove("hidden")
+                }
+            }
+            else{
+                for (j = 0; j < hids.length; j++) {
+                    hids[j].classList.add("hidden")
+                }
+            }
+        }
+    }
+</script>
+</body>
+</html>

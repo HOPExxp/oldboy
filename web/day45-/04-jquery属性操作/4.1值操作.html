@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>值</title>
+</head>
+<body>
+    <div id="box">这是第一个<span>span</span>标签</div>
+    <div id="box1">这是第二个<span>span</span>标签</div>
+    <input type="text">
+    <script src="jquery.min.js"></script>
+    <script>
+        //获取html（）  --  标签元素中的所有内容
+        console.log($("#box").html());
+        //设置html（）
+        $("#box").html("<a href = 'https://www.baidu.com'>百度一下</a>");
+
+        //获取text（）  --  元素的文本内容
+        console.log($("#box1").text());
+        //设置text（）  --  不会被渲染成标签
+        $('#box1').text('<a href="https://www.baidu.com">百度一下</a>');
+
+        $("input").val("设置了表单中的值");
+        console.log($("input").val())
+    </script>
+</body>
+</html>

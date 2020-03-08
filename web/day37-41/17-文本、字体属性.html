@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>文本、字体属性</title>
+</head>
+<style>
+    div{
+        /*文本属性*/
+        text-align: center;
+        /*内联元素之间的对齐*/
+        /*文字与图片垂直方向的对齐*/
+        /*图片与托片垂直方向的对齐*/
+        /*行内块元素垂直方向的对齐*/
+        /*单元格td的内容垂直方向的对齐*/
+        vertical-align: top;
+        /*颜色*/
+        color: aqua;
+        /*text-indent: 5px;*/
+        text-decoration: none;
+        /*盒子高度 -- */
+        line-height: 30px;
+        /******************阴影设置*********/
+        text-shadow: greenyellow;
+        /*padding: 10px;*/
+    }
+    div{
+        /*字体属性*/
+        /*字体大小  不要大于行高，字体会少*/
+        font-size: 20px;
+        /*字体粗细  border--更粗 ； lighter--更细 ； 100-900--设置具体的粗细，400为normal，700为bord*/
+        font-weight: bold/*粗体*/;
+        /*字体系列  若浏览器不支持第一个字体，则找下一个，都不支持则使用宋体*/
+        font-family: 'Microsoft YaHei UI','Arial';
+    }
+    /*文字溢出案例*/
+    .bb{
+       width: 200px;
+       height: 200px;
+       border: 1px solid red;
+    }
+    div p{
+        /*数据溢出时不显示溢出数据*/
+       overflow: hidden;
+       white-space: nowrap;
+        /*数据溢出时用。。。提示*/
+       text-overflow: ellipsis;
+    }
+</style>
+<body>
+    <div style="text-decoration: underline">aaa</div>
+    <div style="text-decoration: overline">aaa</div>
+    <div style="text-decoration: line-through">aaa</div>
+    <div style="text-decoration: inherit">aaa</div>
+    <div class="bb">
+           <p>变有钱 我变有钱多少人没日没夜地浪费时间</p>
+           <p>变有钱 我变有钱多少人没日没夜地浪费时间</p>
+           <p>变有钱 我变有钱多少人没日没夜地浪费时间</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>创建对象</title>
+</head>
+<body>
+<script>
+    // =================<!--最基本的创建方式-->
+    // var student = new Object();
+    // student.name = "easy";
+    // student.age = "19";
+
+    // ===============字面量方式创建 -- 还是不方便，同类型的对象需要重复创建
+    // var student0 = {
+    //     name:"easy1",
+    //     age : "19"
+    // };
+
+    //==============使用工厂模式即可解决重复创建的问题
+    //js中没有类的概念，不妨使用一种函数将创建对象的过程封装起来以便调用
+    //同时给出特定接口来初始化对象
+
+    //创建对象的接口 -- 初始化
+    // function createStudent(name, age) {
+    //     var obj = new Object();
+    //     obj.name = name;
+    //     obj.age = age;
+    //     return obj
+    // }
+    //调用接口创建对象
+    // var student1 = createStudent("easy1","20");
+    // var student2 = createStudent("easy2","20");
+    // var student3 = createStudent("easy3","20");
+    // var studentn = createStudent("easyn","20");
+
+    //当用工厂模式创建对象时，不知道那些是一类（由同一个接口创建的
+    //--哪些是学生，哪些是水果   -- 用instanceof操作符检测时都是Object类型
+    //==================使用构造模式创建对象解决
+
+    //对于任意函数，使用new操作符就是构造函数，不使用就是普通函数
+    //惯例 -- 构造函数用大写字母开头，普通函数用小写字母开头
+
+    //构造函数的使用过程 -- 4个阶段
+    //1）创建一个新对象 2）将构造函数作用域付给新对象（使this指向该新对象）
+    //3）执行构造函数代码 4）返回新对象
+
+    //===========构造函数重写工厂模式的函数
+    function Student(name, age) {
+        this.name = name;
+        this.age = age;
+        // this.alertName = function () {
+        //     alert(this.name)
+        // };
+        this.alertName = alertName;
+    }
+    function Fruit(name, color) {
+        this.name = name;
+        this.color = color;
+        // this.alertName = function () {
+        //     alert(this.name)
+        // };
+        this.alertName = alertName;
+    }
+    function alertName() {
+        alert(this.name);
+    }
+
+    var stu = new Student("easy","20");
+    var fru = new Fruit("apple","green");
+
+    //方法在构造函数内时不弹出警示框！！！！
+    stu.alertName();
+    fru.alertName();
+    //检验
+    // alert(stu instanceof Student); //true
+    // alert(stu instanceof Fruit);   //false
+    // alert(fru instanceof Student); //false
+    // alert(fru instanceof Fruit);   //true
+    //
+    // alert(stu instanceof Object); //true
+    // alert(stu instanceof Object); //true
+
+    //===============使用原型模式创建，将对象的方法移到构造函数外部
+    //多个函数有相同的方法时，调用同一个函数方法，便可以减少内存的消耗
+    // function Student() {
+    //     this.name = 'easy';
+    //     this.age = 20;
+    // }
+    // Student.prototype.alertName = function(){
+    //     alert(this.name);
+    // };
+    // var stu1 = new Student();
+    // var stu2 = new Student();
+    //
+    // // stu1.alertName();  //easy
+    // // stu2.alertName();  //easy
+    //
+    // alert(stu1.alertName == stu2.alertName);  //true 二者共享同一函数
+
+</script>
+</body>
+</html>

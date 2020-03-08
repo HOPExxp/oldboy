@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>节点查找</title>
+</head>
+<script>
+    // //节点查找
+    // // alert("hahaha")
+    // var div1 = document.getElementById("div1");
+    // // console.log(div1)
+    // var ele = div1.getElementsByTagName("p");
+    // alert(ele.innerText);
+    // var ele2 = div1.getElementsByClassName("div2");
+    // alert(ele2.innerHTML);
+    // var ele3 = div1.getElementById("div3");
+    // alert(ele3.length);
+    // var ele4 = div1.getElementsByName("yuan");
+    // alert(ele4.length);
+
+    //节点操作
+    //创建节点
+    function insertNode() {
+        var tag = document.createElement("input");
+        tag.setAttribute('type','text');
+        var text = document.createTextNode('我是外来户');
+        tag.appendChild(text)
+        document.getElementById('div1').appendChild(tag)
+    }
+</script>
+<body>
+    <input type="button" value="insert" onClick="insertNode()">
+    <div id="div1">
+        1
+        <div class="div2">2</div>
+        <div name="yuan">yuan</div>
+        <div id="div3">3</div>
+        <p>hello p</p>
+    </div>
+</body>
+</html>

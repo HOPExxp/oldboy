@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <p>这是一个段落</p>
+    <script src="jquery.min.js"></script>
+    <script>
+        $("p").one("click", function(){
+            //只有第一次点击的时候才会触发，再次点击不会触发了
+            alert( $(this).text() );
+        });
+    </script>
+</body>
+</html>

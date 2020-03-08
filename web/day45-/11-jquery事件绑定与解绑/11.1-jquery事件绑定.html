@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <p>这是一个段落</p>
+    <form action="">
+        <input type="submit" value="阻止事件冒泡">
+    </form>
+    <script src="web/day45-/yuan先生jquery/jquery.min.js"></script>
+    <script>
+        // 无参数
+        // $("p").bind("click",function(){
+        //     alert($(this).text());
+        // });
+
+        //有参数
+        function handler(event) {
+        //    event.data  可以获取bind方法的第二个参数的数据
+            alert(event.data.foo);
+        }
+        $("p").bind("click",{foo:"bar"},handler);
+
+        //阻止事件冒泡  ？？
+        // $("input").bind("submit",function () {
+        //     return false
+        // });
+
+        //取消默认行为  ？？
+        // $("input").bind("submit", function(event){
+        //   event.preventDefault();
+        // });
+
+    </script>
+</body>
+</html>

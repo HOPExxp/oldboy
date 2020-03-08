@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>伪类选择器</title>
+</head>
+<style>
+    /*没有访问时标签的样式*/
+    a:link{
+        color: red;
+    }
+    /*访问过后的标签样式*/
+    a:visited{
+        color: aqua;
+    }
+    /*鼠标悬浮的时候*/
+    a:hover{
+        color: green;
+    }
+    /*鼠标摁着的时候*/
+    a:active{
+        color: black;
+    }
+</style>
+<body>
+    <a href="http://www.douban.com" >百度一下</a>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>onselect事件</title>
+</head>
+<body>
+    <form action="">
+        <input id="inp" type="text" value="hahahahaha">
+        <!--<input id="inp" type="text" value="hahahahaha" onselect="fun()">-->
+    </form>
+
+    <script type="text/javascript">
+        // function fun(){
+        //       alert('123');
+        // };
+        // ele.onselect="alert('You have selected some of the text.')"
+        var div1 = document.getElementById("inp");
+        //绑定事件的第一种方式
+        div1.onselect = function () {
+            alert("我是弹出的内容");
+        }
+    </script>
+</body>
+</html>

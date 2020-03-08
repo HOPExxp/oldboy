@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>左侧菜单栏</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .left{
+            background-color: #7A77C8;
+            width: 20%;
+            height: 500px;
+            float: left;
+        }
+        .right{
+            background-color: #c0cddf;
+            width: 80%;
+            height: 500px;
+            float: left;
+        }
+        .together{
+            /*background-color: mediumpurple;*/
+            line-height: 40px;
+            text-align: center;
+            width: 90%;
+            /*要用margin??，不用padding，而下面用padding*/
+            margin : 5% 5%;
+        }
+        .title{
+            background-color: mediumpurple;
+        }
+        /*.title{*/
+               /*text-align: center;*/
+               /*line-height: 40px;*/
+               /*background-color: #0e90d2;*/
+               /*color: white;*/
+           /*}*/
+        /*.together{*/
+            /*padding: 10px;*/
+        /*}*/
+        /*div{*/
+            /*overflow: hidden;*/
+        /*}*/
+        .ul{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="left">
+        <div class="together">
+            <div class="title" id="t1">菜单一</div>
+            <ul class="ul" id="u1">
+                <li>111</li>
+                <li>222</li>
+                <li>333</li>
+            </ul>
+        </div>
+        <div class="together">
+            <div class="title" id="t2">菜单二</div>
+            <ul class="u2 ul">
+                <li>111</li>
+                <li>222</li>
+                <li>333</li>
+            </ul>
+        </div>
+        <div class="together">
+            <div class="title" id="t3">菜单三</div>
+            <ul class="u3 ul">
+                <li>111</li>
+                <li>222</li>
+                <li>333</li>
+            </ul>
+        </div>
+    </div>
+    <div class="right"></div>
+    <!--自解-->
+    <script>
+        var t1 = document.getElementById("t1");
+        var u1 = document.getElementsByClassName("u1");
+        t1.onclick = function () {
+            // u1.style.display = "block";
+            alert("ok")
+        }
+    </script>
+
+    <!--参考解-->
+    <!--<script>-->
+        <!--var titles = document.getElementsByClassName("title");-->
+        <!--alert(titles.length);-->
+        <!--for(i=0;i<titles.length;i++){-->
+            <!--//点了哪个title标签就撤销隐藏-->
+            <!--titles[i].onclick = function () {-->
+                <!--this.nextElementSibling.classList.remove("ul");-->
+
+                <!--for (j=0;j<titles.length;j++){-->
+                    <!--if (titles[j]!=this){-->
+                        <!--titles[j].nextElementSibling.classList.add("ul")-->
+                    <!--}-->
+                <!--}-->
+            <!--}-->
+        <!--}-->
+    <!--</script>-->
+</body>
+</html>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="PYTHON_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/练习/老男孩基础" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/网络编程" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/并发编程" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/练习/老男孩基础数据类型练习" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/练习/老男孩函数" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/day22 模块" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/day23 re模块练习" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/练习/老男孩函数练习" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/练习/老男孩模块练习" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/练习/武佩奇" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/练习" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/web" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/web/day36" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/web/day37-41" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/web/day37-41/1.css选择器" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/web/day37-41/2.盒模型" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/web/day37-41/3.标准文档流" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/web/day42-" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/web/day37-41/yuan先生css" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/web/day37-41/yuan先生美乐乐实例" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/web/day42-/yuan先生JavaScript" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/web/day42-/yuan先生实例" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/web/day42-/10" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/web/day42-/11" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/web/day42-/12.DOM操作实例" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/web/day42-/13.js中的面向对象" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/web/day42-/15-BOM模型" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/web/day42-/16-client,offset,scroll系列" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/web/day45-" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/web/day45-/yuan先生jquery" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/web/day45-/01-jquery介绍" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/web/day45-/02-jquery选择器" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/web/day45-/03-jquery动画效果" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/web/day45-/04-jquery属性操作" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/web/day45-/05-操作input的value值" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/web/day45-/06-jquery文档操作" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/web/day45-/11-jquery事件绑定与解绑" isTestSource="false" />
+      <excludeFolder url="file://$MODULE_DIR$/venv" />
+    </content>
+    <orderEntry type="jdk" jdkName="Python 3.7" jdkType="Python SDK" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+  <component name="TestRunnerService">
+    <option name="PROJECT_TEST_RUNNER" value="Unittests" />
+  </component>
+</module>

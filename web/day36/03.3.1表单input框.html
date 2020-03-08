@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单</title>
+</head>
+<body>
+    <!--用于与服务器的交互,来手机用户信息,就是让用户填写,选择的-->
+    <!--属性:action - 指定表单数据的处理程序,一般是php ; method - 表单数据的提交方式 - get(默认)/post-->
+    <!--利用百度搜索-->
+    <!--<form action="https://www.baidu.com/s">-->
+        <!--<input type="text" name="wd" value="" />-->
+        <!--<input type="submit" value="搜索">-->
+    <!--</form>-->
+
+    <!--input的type属性,value属性,readonly属性,disabled属性-->
+    <form action="">
+        <input type="text"placeholder="用户名">
+        <input type="password"placeholder="密码"><br>
+        <!--radio 单选框           checked属性 -- 将单选按钮或多选按钮处于选中状态  -->
+        性别：<input type="radio" name="gender" value="male" checked="">男
+              <input type="radio" name="gender" value="female" >女<br>
+        <!--checkbox 多选框-->
+        爱好：<input type="checkbox" name="love" value="eat">吃饭
+              <input type="checkbox" name="love" value="sleep">睡觉
+              <input type="checkbox" name="love" value="bat">打豆豆<br>
+        <!--hidden 隐藏框-->
+        <input type="hidden">
+        <!--按钮框-->
+        <!--普通按钮 -- 结合js代码使用-->
+        <input type="button" value="普通按钮"><br>
+        <!--提交按钮 -- 不需要写value自动就会由"提交"文字-->
+        <input type="submit"  value="提交按钮"><br>
+        <!--重置按钮 -- 清空当前表单的内容,并设置最初的默认值-->
+        <input type="reset" value="重置按钮"><br>
+        <!--图片按钮 -- 同提交按钮,只不过图片按钮可以显示图片-->
+        <input type="image" src="http://www.33lc.com/article/UploadPic/2012-7/201272510182494484.jpg"
+               width="400" value="图片按钮2"><br>
+        <!--如果要限制上传文件的类型，需要配合JS来实现验证。对上传文件的安全检查：
+        一是扩展名的检查，二是文件数据内容的检查。-->
+        <input type="file" value="文件选择框">
+    </form>
+</body>
+</html>

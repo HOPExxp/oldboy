@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM事件操作</title>
+    <style>
+        #box {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="box1">lalala</div>
+    <div id="box" ></div>
+<script type="text/javascript">
+    // 1、获取事件源
+    var div = document.getElementById("box1");
+    // 2、绑定事件
+    div.onclick = function () {
+        // 3、书写事件驱动程序
+        alert("我是弹出的内容");
+    };
+
+    window.onload = function () {
+        console.log("小马哥");  //等页面加载完毕时，打印字符串
+    };
+    var oDiv = document.getElementById("box");
+    //点击鼠标时，原本粉色的div变大了，背景变红了
+    oDiv.onclick = function () {
+        oDiv.style.width = "200px";   //属性值要写引号
+        oDiv.style.height = "200px";
+        oDiv.style.backgroundColor = "red";   //属性名是backgroundColor，不是background-Color
+    }
+</script>
+</body>
+</html>

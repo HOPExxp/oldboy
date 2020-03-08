@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>属性操作</title>
+</head>
+<body>
+    <input id="chk1" type="checkbox" />是否可见
+    <input id="chk2" type="checkbox" checked="checked" />是否可见
+
+    <script src="jquery.min.js"></script>
+    <script>
+
+    //对于HTML元素本身就带有的固有属性，在处理时，使用prop方法。
+    //对于HTML元素我们自己自定义的DOM属性，在处理时，使用attr方法。
+    //像checkbox，radio和select这样的元素，选中属性对应“checked”和“selected”，这些也属于固有属性，因此
+    //需要使用prop方法去操作才能获得正确的结果。
+
+
+    //    $("#chk1").attr("checked")
+    //    undefined
+    //    $("#chk1").prop("checked")
+    //    false
+
+    //  ---------手动选中的时候attr()获得到没有意义的undefined-----------
+    //    $("#chk1").attr("checked")
+    //    undefined
+    //    $("#chk1").prop("checked")
+    //    true
+
+        console.log($("#chk1").prop("checked"));//false
+        console.log($("#chk2").prop("checked"));//true
+        console.log($("#chk1").attr("checked"));//undefined
+        console.log($("#chk2").attr("checked"));//checked
+    </script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>scrolltop/left</title>
+
+    <style>
+        body{
+            margin: 0;
+        }
+        .returnTop{
+            height: 60px;
+            width: 100px;
+            background-color: peru;
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            color: white;
+            line-height: 60px;
+            text-align: center;
+        }
+        .div1{
+            background-color: wheat;
+            font-size: 5px;
+            overflow: auto;
+            width: 500px;
+            height: 200px;
+        }
+        .div2{
+            background-color: darkgrey;
+            height: 2400px;
+        }
+
+
+        .hide{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+     <div class="div1 div">
+           <h1>hello</h1>
+           <h1>hello</h1>
+           <h1>hello</h1>
+           <h1>hello</h1>
+           <h1>hello</h1>
+           <h1>hello</h1>
+           <h1>hello</h1>
+           <h1>hello</h1>
+           <h1>hello</h1>
+           <h1>hello</h1>
+           <h1>hello</h1>
+           <h1>hello</h1>
+           <h1>hello</h1>
+           <h1>hello</h1>
+           <h1>hello</h1>
+           <h1>hello</h1>
+     </div>
+     <div class="div2 div"></div>
+     <div class="returnTop hide">返回顶部</div>
+
+ <script src="jquery.min.js"></script>
+    <script>
+         $(window).scroll(function(){
+             //scrollTop() 方法返回或设置匹配元素的滚动条的垂直位置
+             //scrollLeft() 方法的功能类似
+             var current=$(window).scrollTop();
+              console.log(current);
+              if (current>100){
+
+                  $(".returnTop").removeClass("hide")
+              }
+              else {
+              $(".returnTop").addClass("hide")
+          }
+         });
+
+
+        $(".returnTop").click(function(){
+            $(window).scrollTop(0)
+        });
+
+
+    </script>
+</body>
+</html>

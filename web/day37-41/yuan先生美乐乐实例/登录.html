@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登陆</title>
+    <style>
+        .left {
+            /*width: 30%;*/
+            /*height: 80%;*/
+            float: left;
+            /*align-self: center;*/
+            padding-left: 10%;
+            padding-right: 10%;
+            padding-top: 10%;
+            padding-bottom: 10%;
+        }
+
+        .right {
+            /*width: 30%;*/
+            height: 80%;
+            float: left;
+            padding-left: 10%;
+            padding-top: 15%;
+            /*padding-bottom: 10%;*/
+        }
+
+        .login {
+            border: 1px solid gainsboro;
+            margin: 5%;
+
+        }
+
+        /*.header-icon{*/
+        /*padding-bottom: 5%;*/
+        /*}*/
+        div {
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+<div class="header-icon">
+    <img src="logo.png" alt="">
+</div>
+<div class="login">
+    <div class="left">
+        <img src="nianzhonghui.jpg" alt="" class="img">
+    </div>
+    <div class="right">
+        <form action="" class="form-group">
+            用户名：<input type="text"><br><br>
+
+            <span>&nbsp;&nbsp;&nbsp;</span>密码：<input type="password"><br><br>
+
+            验证码：<input type="text" style="width: 25% ; margin-right: 5%"><img src="" alt="跳过"><br><br>
+
+            <div style="padding: auto;margin: auto">
+                <input type="radio" name="auto-login" checked="true">自动登陆
+            <a href="">忘记密码</a><br><br>
+
+            </div>
+
+            <input type="submit" value="登陆" style="width: 90% ;height: 35px;
+            background-color: red">
+        </form>
+    </div>
+</div>
+</body>
+</html>

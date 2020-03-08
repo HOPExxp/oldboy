@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM介绍</title>
+</head>
+<script>
+    // 创建节点
+    var a1 = document.createElement('li');
+    var a2 = document.createTextNode('adbc');
+
+    console.log(a1);
+    console.log(a2);
+
+    console.log(typeof a1);
+    console.log(typeof a2);
+
+    //往节点中加入文本
+    a1.appendChild(a2);
+
+    //将节点加入父节点
+    var father = document.getElementById('di');
+    father.appendChild(a1)
+</script>
+<body>
+    <div id="di">xxxxxx</div>
+</body>
+</html>

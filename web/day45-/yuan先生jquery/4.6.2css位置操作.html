@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2</title>
+    <style>
+        *{
+            margin: 0;
+        }
+        .box1{
+            width: 200px;
+            height: 200px;
+            background-color: rebeccapurple;
+        }
+        .box2{
+            width: 200px;
+            height: 200px;
+            background-color: darkcyan;
+        }
+        .parent_box{
+             position: relative;
+        }
+    </style>
+</head>
+<body>
+
+
+
+
+<div class="box1"></div>
+<div class="parent_box">
+    <div class="box2"></div>
+</div>
+<p></p>
+
+
+<script src="jquery.min.js"></script>
+<script>
+    //position() 方法返回匹配元素相对于父元素的位置（偏移）
+    var $position=$(".box2").position();
+    var $left=$position.left;
+    var $top=$position.top;
+
+    $("p").text("TOP:"+$top+"LEFT"+$left)
+</script>
+</body>
+</html>

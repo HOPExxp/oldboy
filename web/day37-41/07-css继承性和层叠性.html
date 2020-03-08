@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>继承和层叠</title>
+</head>
+<!--继承：给父级设置一些属性，子级继承了父级的该属性，这就是我们的css中的继承。-->
+
+<!--记住：有一些属性是可以继承下来 ： color 、 font-*、 text-*、line-* 。主要是文本级的标签元素。-->
+
+<!--但是像一些盒子元素属性，定位的元素（浮动，绝对定位，固定定位）不能继承-->
+<style>
+    /*坑1*/
+    /*两个id              number 1*/
+    /*#box1 #box2 p{*/
+            /*color: yellow;*/
+        /*}*/
+    /*一个id,一个属性      number 2*/
+    /*#box2 .wrap3 p{*/
+            /*color: red;*/
+        /*}*/
+    /*一个id 两个标签      number 3*/
+    /*div div #box3 p{*/
+            /*color: purple;*/
+        /*}*/
+    /*三个属性,三个标签    number 4*/
+    /*div.wrap1 div.wrap2 div.wrap3 p{*/
+            /*color: blue;*/
+        /*}*/
+
+    /*坑2*/
+    /*#box1 .wrap2 p{*/
+        /*color: yellow;*/
+    /*}*/
+    /*#box2 .wrap3 p{*/
+        /*color: red;*/
+    /*}*/
+    /*权重相同时,后来者居上*/
+
+    /*坑3*/
+    /*这里没有直接设置p的属性,继承来的属性权重最低*/
+    /*#box1 #box2 .wrap3{*/
+        /*color: red;*/
+    /*}*/
+
+    /*#box2 .wrap3 p{*/
+        /*color: green;*/
+    /*}*/
+
+    /*坑4*/
+    #box1 #box2 .wrap3{
+        color: red;
+    }
+    .wrap1 #box2{
+        color: green;
+    }
+    /*权重相同而且都是继承来的属性时,谁离目标标签近就用谁*/
+</style>
+<body>
+    <div id="box1" class="wrap1">
+        <div id="box2" class="wrap2">
+            <div id="box3" class="wrap3">
+                <p>再来猜猜我的颜色</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

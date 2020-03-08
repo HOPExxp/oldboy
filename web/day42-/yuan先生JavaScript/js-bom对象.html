@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bom-window对象</title>
+</head>
+<script>
+    //警示框
+    // alert("aaa");
+    // //确认框
+    // var res = confirm("您确定要删除吗？");
+    // alert(res)
+    //提示框
+    // var res1 = prompt("请输入一个数字","haha");
+    // alert(res1)
+
+    //open方法 -- 打开新的浏览器窗口
+    // open("http://www.baidu.com");
+    // open('','','width=200,resizable = no,height = 100')
+    // close()
+
+    //实例1
+    // var num = Math.round(Math.random()*100); // 0-100之间的一个数
+    // function acceptInput() {
+    //     var userNum  = prompt("请输入一个0-100之间的数字：",'0');
+    //     if(isNaN(+userNum)){
+    //         //用户输入的值无效
+    //         alert("请输入有效数字");
+    //         acceptInput();
+    //     }
+    //     else if(userNum > num){
+    //         alert("您输入的数字大了");
+    //         acceptInput();
+    //     }
+    //     else if(userNum < num){
+    //         alert("您输入的数字小了");
+    //         acceptInput();
+    //     }
+    //     else {
+    //         alert('输入正确')
+    //         close()
+    //     }
+    // }
+    // acceptInput()
+
+    //实例2 -- setinterval/clearinterval
+    function showTime() {
+        //获取当前的时间
+        var nowd2 = new Date().toLocaleString();
+        //获取节点
+        var temp = document.getElementById('ID1');
+        //设置节点的内容为当前的时间-- 动态！！！！
+        temp.value = nowd2
+    }
+    var ID;
+    function begin() {
+        if (ID == undefined){
+            showTime();
+            //以1000ms为周期重复调用函数
+            ID = setInterval(showTime,1000)
+        }
+    }
+    function end() {
+        clearInterval(ID)
+        ID = undefined
+    }
+</script>
+<body>
+    <input type="text" id="ID1" onclick="begin()">
+    <button onclick="end()">停止</button>
+</body>
+</html>

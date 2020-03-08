@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>图片悬浮</title>
+    <style>
+        /*.show{*/
+            /*display: block;*/
+        /*}*/
+        /*.set{*/
+            /*display: block;*/
+        /*}*/
+        /*img{*/
+            /*display: none;*/
+        /*}*/
+    </style>
+</head>
+<body>
+<!--拙略版-->
+    <div>
+        <img src="web/day42-/10/sdq.jpg" alt="" onmouseover="change()" id="image" onmouseout="back()"
+             style="cursor: pointer;border: 1px solid chartreuse;height: 500px ">
+    </div>
+    <script>
+        var img = document.getElementById("image");
+        function change() {
+            img.src = "g41.jpg";
+        }
+        function back() {
+            img.src = "sdq.jpg";
+        }
+    </script>
+<!--高级版-->
+    <!--<div>-->
+        <!--<img src="sdq.jpg" alt="" id="img1" class="set">-->
+        <!--<img src="g41.jpg" alt="" id="img2" class="">-->
+    <!--</div>-->
+<!--<script>-->
+    <!--var img1 = document.getElementById("img1");-->
+    <!--var img2 = document.getElementById("img2");-->
+
+    <!--img1.onmouseover = function () {-->
+        <!--img2.className = "set";-->
+        <!--img1.className = "";-->
+    <!--};-->
+    <!--img1.onmouseout = function () {-->
+        <!--img2.className = "";-->
+        <!--img1.className = "set";-->
+    <!--}-->
+<!--// </script>-->
+</body>
+</html>

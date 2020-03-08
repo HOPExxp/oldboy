@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>简易留言板</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        span{
+            background-color: red;
+            width: 30px;
+            height: 30px;
+            margin-left: 30px;
+        }
+    </style>
+</head>
+<body>
+<h1>简易留言板</h1>
+<ul></ul>
+<div>
+    <textarea name="留言" id="" cols="30" rows="3"></textarea>
+    <input type="button" value="留言">
+    <input type="button" value="统计">
+    <script>
+        var txt = document.getElementsByTagName("textarea")[0];
+        var ly = document.getElementsByTagName("input")[0];
+        var tj = document.getElementsByTagName("input")[1];
+        var ul = document.getElementsByTagName("ul")[0];
+        ly.onclick = function () {
+            // alert(txt.value);
+            //生成li标签
+            var li = document.createElement("li");
+            var text = document.createTextNode(txt.value);
+            txt.value = "";
+            li.appendChild(text);
+            ul.appendChild(li);
+            //生成删除标签
+            var del = document.createElement("span");
+            var text1 = document.createTextNode("X");
+            del.appendChild(text1);
+            li.appendChild(del)
+        };
+        tj.onclick = function () {
+            alert(ul.childNodes.length)
+        };
+        window.onload = function () {
+            var del = document.getElementsByTagName("span");
+            for (i = 0; i < del.length; i++){
+                del[i].onclick = function () {
+                    ul.removeChild(ul.childNodes[i]);
+                }
+            }
+        }
+    </script>
+</div>
+</body>
+</html>

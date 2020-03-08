@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表格案例</title>
+</head>
+<body>
+
+<button class="select_all">全选</button>
+<button class="select_reverse">反选</button>
+<button class="cancel">取消</button>
+
+<hr>
+
+<table class="server_table" border="2px" cellspacing="2px">
+    <tr>
+        <td><input type="checkbox" class="item"></td>
+        <td>1</td>
+        <td>11</td>
+        <td>111</td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" class="item"></td>
+        <td>2</td>
+        <td>22</td>
+        <td>222</td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" class="item"></td>
+        <td>3</td>
+        <td>33</td>
+        <td>333</td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" class="item"></td>
+        <td>4</td>
+        <td>44</td>
+        <td>444</td>
+    </tr>
+</table>
+
+
+<script>
+/*
+    var ele_all=document.getElementsByClassName("select_all")[0];
+    var ele_reverse=document.getElementsByClassName("select_reverse")[0];
+    var ele_cancel=document.getElementsByClassName("cancel")[0];
+    var input_arr=document.getElementsByClassName("item");
+
+    ele_all.onclick=function(){
+          for(var i=0;i<input_arr.length;i++){
+              console.log(input_arr[i]);
+              var input=input_arr[i];
+              input.checked=true;
+          }
+    };
+
+     ele_cancel.onclick=function(){
+          for(var i=0;i<input_arr.length;i++){
+              console.log(input_arr[i]);
+              var input=input_arr[i];
+              input.checked=false;
+          }
+    };
+
+    ele_reverse.onclick=function(){
+          for(var i=0;i<input_arr.length;i++){
+              console.log(input_arr[i]);
+              var input=input_arr[i];
+              if(input.checked){
+                  input.checked=false;
+              }
+              else{
+                  input.checked=true;
+              }
+          }
+    };
+
+*/
+
+
+    var input_arr=document.getElementsByClassName("item");
+    var button_arr=document.getElementsByTagName("button");
+
+    for(var i=0;i<button_arr.length;i++){
+
+        //每个按钮点击事件的响应函数
+        button_arr[i].onclick=function(){
+            // var inp=input_arr[j];
+
+            //全选时，遍历->checked = true
+            for (var j=0;j<input_arr.length;j++){
+
+                //为什么这个变量要放在这里
+                 var inp=input_arr[j];
+                 if(this.innerText=="全选"){
+                     console.log("ok");
+                 inp.checked=true;
+             }
+
+             //取消时，遍历，
+            else if(this.innerText=="取消"){
+                  inp.checked=false;
+             }
+
+             //再有就是反选操作，
+            else {
+                 if(inp.checked){
+                     inp.checked=false;
+                 }else {
+                     inp.checked=true;
+                 }
+             }
+
+            }
+        }
+
+    }
+</script>
+</body>
+</html>

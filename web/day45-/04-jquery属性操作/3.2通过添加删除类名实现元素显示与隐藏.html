@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        .active{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+     <ul>
+         <li class="item">张三</li>
+         <li class="item">李四</li>
+         <li class="item">王五</li>
+     </ul>
+     <script type="text/javascript" src="jquery-3.3.1.js"></script>
+     <script type="text/javascript">
+         $(function(){
+
+             $('ul li').click(function(){
+                 // this指的是当前点击的DOM对象 ,使用$(this)转化jquery对象
+                 $(this).addClass('active').siblings('li').removeClass('active');
+                 // $(this).toggleClass('active')
+             })
+         })
+     </script>
+
+</body>
+</html>

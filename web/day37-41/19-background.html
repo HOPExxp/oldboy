@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>background</title>
+</head>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+    }
+    ul{
+        list-style: none;
+    }
+    .nav{
+        /*!*设置body区背景图片*!*/
+        /*background-image: url("http://image.tupian114.com/20130330/00310284.jpg");*/
+        width: 960px;
+        /*不设置高度*/
+        overflow: hidden;
+        margin: 100px auto;
+        /*background-color: purple;*/
+        /*设置圆角*/
+        border-radius: 5px;
+    }
+    .nav ul li{
+        /*设置body区背景图片*/
+        /*banner图？？*/
+        /*background:  red  url('./images/banner.jpg')  no-repeat   center top;*/
+        background-image: url("http://image.tupian114.com/20130330/00310284.jpg");
+        /*background-position: center;*/
+        background-size: 160px;
+        /*子元素浮动,设置浮动后，元素互相贴靠特性使得行内块标签没起作用
+        ，需要清除浮动*/
+        float: left;
+        width: 160px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+    }
+    .nav ul li a{
+        /*设置成行内块标签*/
+        /*display: block;*/
+        width: 160px;
+        height: 40px;
+        color: purple;
+        font-size: 20px;
+        text-decoration: none;
+        font-family: 'Microsoft YaHei UI';
+    }
+    .nav ul li a:hover{
+        background-color: green;
+        font-size: 22px;
+    }
+    /*清除浮动 有用*/
+    .clearfix:after{
+        content: '';
+        clear: both;
+        display: block;
+    }
+</style>
+<body>
+    <div class="nav">
+        <ul class="clearfix">
+            <li>
+                <a href="">路飞学城</a>
+            </li>
+            <li>
+                <a href="">老男孩</a>
+            </li>
+            <li>
+                <a href="">网站导航</a>
+            </li>
+            <li>
+                <a href="">网站导航</a>
+            </li>
+            <li>
+                <a href="">网站导航</a>
+            </li>
+            <li>
+                <a href="">网站导航</a>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

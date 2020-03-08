@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    /*重要*/
+    html,body {
+        height: 100%;
+    }
+    #first{
+        background-color: #0e90d2;
+        width: 100%;
+        height: 100%;
+        float: left;
+    }
+    #second{
+        background-color: antiquewhite;
+        width: 40%;
+        height: 20%;
+        /*height: 100%;*/
+        /*margin-top: 20%;*/
+        margin: auto 30%;
+        /*float: left;*/
+        margin-top: 300px;
+    }
+    #third{
+        background-color: red;
+        width: 25px;
+        height: 25px;
+        text-align: center;
+        vertical-align: center;
+        float: right;
+    }
+    .hidden{
+        display: none;
+    }
+    div,input{
+        overflow: hidden;
+    }
+</style>
+<body>
+    <!--############################自制模拟框，不是警示框############################-->
+    <!--需求：
+     打开网页时有一个普通的按钮，点击当前按钮显示一个背景图，中心并弹出一个弹出框，点击X的时候会关闭当前的模态框-->
+    <input type="button" value="点我" id="btn" style="float: left" class="">
+    <!--点击按钮后的标签内容-->
+    <div class="hidden" id="first">
+        <div class="hidden" id="second">
+            <input type="button" value="x" class="hidden" id="third"></input>
+        </div>
+    </div>
+    <script>
+        var bt1 = document.getElementById("btn");
+        var big = document.getElementsByClassName("hidden")[0];
+        var small = document.getElementsByClassName("hidden")[1];
+        var bt2 = document.getElementById("third");
+        bt1.onclick = function () {
+            big.className = "";
+            small.className = "";
+            bt2.className = "";
+            bt1.className = "hidden";
+        };
+        bt2.onclick = function () {
+            big.className = "hidden";
+            small.className = "hidden";
+            bt2.className = "hidden";
+            bt1.className = "";
+        }
+    </script>
+</body>
+</html>

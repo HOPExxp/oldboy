@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>padding</title>
+</head>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+    }
+    .big{
+        width: 500px;
+        height: 450px;
+        background-color: dodgerblue;
+        /*改padding的情况下不改变盒子大小,就要改变宽高*/
+        padding-top: 150px;
+    }
+    .small{
+        width: 250px;
+        height: 150px;
+        background-color: red;
+        /*margin-top: 150px;*/
+    }
+</style>
+<body>
+    <div class="big">
+        <div class="small"></div>
+    </div>
+</body>
+</html>

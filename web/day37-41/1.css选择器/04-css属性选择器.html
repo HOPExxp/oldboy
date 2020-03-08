@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>css属性选择器</title>
+</head>
+<style>
+    /*查找所有的for属性的标签*/
+    /*[for]{*/
+        /*color: red;*/
+    /*}*/
+    /*查找所有for属性为wd的标签*/
+    /*[for='wd']{*/
+        /*color: aqua;*/
+    /*}*/
+    /*!*查找所有for属性值结尾为vvip的标签*!*/
+    /*[for$=vvip]{*/
+        /*color: aqua;*/
+    /*}*/
+    /*!*查找所有for属性值开头为vvip的标签*!*/
+    /*[for^=xx]{*/
+        /*color: red;*/
+    /*}*/
+    /*查找所有for属性值包含vip的标签*/
+    /*[for*=vip]{*/
+        /*color: aquamarine;*/
+    /*}*/
+    div[for='wd']{
+        color: aqua;
+    }
+</style>
+<body>
+    <div for="username">
+        username
+    </div>
+    <div for="wd">
+        wd
+    </div>
+    <div for="wdvvip">
+        vvip
+    </div>
+    <div for="xxjsvip">
+        xx
+    </div>
+    <p for="wd">p段落</p>
+
+</body>
+</html>

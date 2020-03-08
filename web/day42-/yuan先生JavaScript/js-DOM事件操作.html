@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM事件操作</title>
+
+    <script>
+         /*
+              window.onload=function(){
+                   var ele=document.getElementById("ppp");
+                   ele.onclick=function(){
+                   alert(123)
+                };
+             };
+
+         */
+
+
+
+          function fun() {
+              var ele=document.getElementById("ppp");
+               ele.onclick=function(){
+                alert(123)
+            };
+          }
+
+    </script>
+</head>
+<body onload="fun()">
+
+<p id="ppp">hello p</p>
+
+</body>
+</html>

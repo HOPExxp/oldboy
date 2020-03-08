@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #container{
+            width: 300px;
+        }
+        #title,#title1{
+            cursor: pointer;
+            background: #ccc;
+        }
+       #list,#list1{
+           display: none;
+           background:#fff;
+       }
+
+        #list div,#list1 div{
+            line-height: 50px;
+        }
+        #list  .item1,#list1 .item1{
+            background-color: green;
+        }
+
+         #list  .item2,#list1 .item2{
+            background-color: rebeccapurple;
+        }
+
+         #list  .item3,#list1 .item3{
+            background-color: lemonchiffon;
+        }
+
+
+    </style>
+</head>
+<body>
+
+
+<p>先看下使用mouseout的效果:</p>
+
+<div id="container">
+        <div id="title">使用了mouseout事件↓--离开container中任何一个元素就会触发，实际上看去就是离开title时触发</div>
+        <div id="list">
+                <div class="item1">第一行</div>
+                <div class="item2">第二行</div>
+                <div class="item3">第三行</div>
+        </div>
+        <div id="title1">使用了mouseleave事件↓--离开container时触发</div>
+        <div id="list1">
+                <div class="item1">第一行</div>
+                <div class="item2">第二行</div>
+                <div class="item3">第三行</div>
+        </div>
+</div>
+
+
+<script>
+
+// 1.不论鼠标指针离开被选元素还是任何子元素，都会触发 mouseout 事件。
+
+// 2.只有在鼠标指针离开被选元素时，才会触发 mouseleave 事件。
+
+   var container=document.getElementById("container");
+   var title=document.getElementById("title");
+   var title1=document.getElementById("title1");
+   var list=document.getElementById("list");
+   var list1 =document.getElementById("list1");
+
+   title.onmouseover=function(){
+       list.style.display="block";
+   };
+
+   container.onmouseout=function(){  // 改为mouseout试一下
+       list.style.display="none";
+   };
+
+   title1.onmouseover=function(){
+       list1.style.display="block"
+   };
+
+   container.onmouseleave=function(){  // 改为mouseout试一下
+       list1.style.display="none";
+   };
+/*
+
+因为mouseout事件是会冒泡的，也就是onmouseout事件可能被同时绑定到了container的子元素title和list
+上，所以鼠标移出每个子元素时也都会触发我们的list.style.display="none";
+
+*/
+
+
+  /*
+  思考:
+  if:
+
+       list.onmouseout=function(){
+           list.style.display="none";
+   };
+
+
+     为什么移出第一行时,整个list会被隐藏?
+
+     其实是同样的道理,onmouseout事件被同时绑定到list和它的三个子元素item上,所以离开任何一个
+     子元素同样会触发list.style.display="none";
+
+   */
+
+</script>
+</body>
+</html>

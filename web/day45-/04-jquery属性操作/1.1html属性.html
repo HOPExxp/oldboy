@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <div id="me" class="name" ></div>
+
+    <script src="jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // // 只设置一个属性值的时候，只是获取值
+            // var id = $('div').attr('id');
+            // console.log(id);
+            // var cla = $('div').attr('class');
+            // console.log(cla);
+            // 设置值
+            //1.设置一个值 设置div的class为box
+            $('div').attr('class','box');
+            //2.设置多个值，参数为对象，键值对存储
+            $('div').attr({id:'hahaha',class:'happy'});
+
+            //删除单个属性
+            // $('#box').removeAttr('id');
+            // $('#box').removeAttr('class');
+
+            //删除多个属性
+            // $('div').removeAttr('id class');
+
+            // 只设置一个属性值的时候，只是获取值
+            var id = $('div').attr('id');
+            console.log(id);
+            var cla = $('div').attr('class');
+            console.log(cla);
+        })
+
+    </script>
+</body>
+</html>

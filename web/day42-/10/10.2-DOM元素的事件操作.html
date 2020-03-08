@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>京东案例</title>
+    <style type="text/css">
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .top-banner{
+            /*position: relative;*/
+            background-color: rgb(230, 15, 82);
+        }
+        /*===================改变不了颜色的范围=========*/
+        .top-banner .w{
+            width: 1190px;
+            position: relative;
+            margin: 0 auto;
+        }
+        .top-banner .banner{
+            display: block;
+            width: 100%;
+            height: 80px;
+            background: url('http://pic37.photophoto.cn/20151014/0017029560074343_b.jpg') no-repeat center 0;
+        }
+        .top-banner .close{
+            position: absolute;
+            right: 0;
+            top:0;
+            text-decoration: none;
+            color: white;
+            width: 20px;
+            height: 20px;
+            line-height: 20px;
+            text-align: center;
+        }
+        /*============================点击x按钮时给top-bannner添加该类名==============*/
+        .hide{
+            display: none;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="top-banner" id="topBanner">
+        <div class="w">
+            <a href="#" class="banner"></a>
+            <a href="#" class="close" id="closeBanner">x</a>
+        </div>
+    </div>
+    <script type="text/javascript">
+        // /需求：点击案例，隐藏盒子。
+            //思路：点击a链接，让top-banner这个盒子隐藏起来（加隐藏类名）。
+
+        window.onload  = function(){
+            // /1.获取事件源和相关元素
+            var closeBanner = document.getElementById('closeBanner');
+            var topBanner = document.getElementById('topBanner');
+            //2.绑定事件
+            closeBanner.onclick = function(){
+                //3.书写事件驱动程序
+                        //类控制
+                topBanner.className += ' hide';//保留原类名，添加新类名
+                //topBanner.className = 'hide';//替换旧类名
+                topBanner.style.display = 'none';
+            }
+        }
+    </script>
+
+
+</body>
+</html>

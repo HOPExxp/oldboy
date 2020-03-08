@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>尺寸操作</title>
+    <style>
+        *{
+            margin: 0;
+        }
+        .box1{
+            width: 200px;
+            height: 200px;
+            background-color: wheat;
+            padding: 50px;
+            border: 50px solid rebeccapurple;
+            margin: 50px;
+        }
+
+    </style>
+</head>
+<body>
+
+
+
+
+<div class="box1">
+    DIVDIDVIDIV
+</div>
+
+
+<p></p>
+
+<script src="jquery.min.js"></script>
+<script>
+    var $height=$(".box1").height();
+    var $innerHeight=$(".box1").innerHeight();
+    var $outerHeight=$(".box1").outerHeight();
+    var $margin=$(".box1").outerHeight(true);
+
+    $("p").text($height+"---"+$innerHeight+"-----"+$outerHeight+"-------"+$margin)
+</script>
+</body>
+</html>

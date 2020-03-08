@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>跑马灯切换</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>tab</title>
+  <style>
+    *{margin:0; padding:0; list-style:none;}
+    /*body{*/
+        /*font-family: "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", "\9ED1\4F53", Arial, sans-serif;*/
+    /*}*/
+    h3{
+      text-align: center;
+      color:darkcyan;
+      margin-top: 30px;
+      letter-spacing: 5px;
+      /*word-spacing: 5px;*/
+      /*letter-spacing和word-spacing这两个属性都用来添加他们对应的元素中的空白。
+      letter-spacing添加字母之间的空白，而word-spacing添加每个单词之间的空白。
+      请大家注意，word-spacing对中文无效*/
+    }
+    /*==========================box头部标签的设置=============================*/
+    .box{
+      width: 1000px;
+      margin:50px auto 0px;
+    }/*over*/
+    /*select选择的样式--长度100%*/
+    #title{
+      line-height: 40px;
+      background-color: rgb(247,247,247);
+      font-size: 16px;
+      font-weight: bold;
+      color: rgb(102,102,102);
+    }
+    #title span{
+      float: left;
+      /*1000/6==166*/
+      width: 166px;
+      text-align: center;
+    }
+    /*===========================清除p浮动=============*/
+    p{
+        overflow: hidden;
+    }
+    #title span:hover{
+      /*color: black;*/
+      /*悬浮时游标变成小手样式*/
+      cursor: pointer;
+    }
+    /*开始时设置select时的样式*/
+    #title .select{
+      background-color: #2459a2;
+      color: white;
+      border-radius: 10%;
+    }
+    /*===========================content设置======================*/
+    #content{
+      margin-top: 20px;
+    }
+    #content li{
+      width: 1050px;
+      display: none;
+      /*background-color: rgb(247,247,247);*/
+    }
+    #content li div{
+      /*166 == 156+14*/
+      width: 156px;
+      margin-right: 14px;
+      float: left;
+      text-align: center;
+    }
+    /*===============================================*/
+    /*清除ul浮动*/
+    ul,li{
+        overflow: hidden;
+    }
+    /*=======================a标签的设置========================*/
+    #content li div a{
+      font-size: 14px;
+      color: black;
+      line-height: 14px;
+      /*  float: left;*/
+      display: inline-block;
+      margin-top: 10px;
+    }/*宽度随元素改变？？？？？*/
+    #content li a:hover{
+      color: #B70606;
+    }
+    /*=========================span-价格标签的设置=========================*/
+    #content li div span{
+        font-size: 16px;
+        line-height: 16px;
+        /*float: left;*/
+        display: block;
+        color: rgb(102,102,102);
+        margin-top: 10px;
+      }/*宽度随父元素？？？？？*/
+    /*================================img标签的设置==============================*/
+    #content img{
+      float: left;
+      /*宽度为li标签下div标签的宽度*/
+      width: 155px;
+      /*height: 250px;*/
+    }
+    /*================================显示第一组照片==========================*/
+    #content .show{
+      display: block;
+    }
+    /*价格的颜色显示为红色*/
+    .show span{
+        color: red!important;
+        font-size: 30px;
+    }
+  </style>
+</head>
+
+<body>
+  <h3 id="wel">京东商城欢迎您</h3>
+  <!--  direction="right up down left" -->
+  <!--  behavior：滚动方式(包括3个值：scroll、slide、alternate) -->
+  <!--  说明：scroll：循环滚动，默认效果；slide：只滚动一次就停止；alternate：来回交替进行滚动。 -->
+  <!--  scrollamount="5" 滚动速度 -->
+  <marquee behavior="scroll" direction="right">欢迎您苑昊先生</marquee>
+  <!--=============================================================-->
+  <!--<script>-->
+
+    <!--function test(){-->
+
+        <!--var mywel = document.getElementById("wel");-->
+        <!--var content = mywel.innerText;-->
+
+        <!--var f_content = content.charAt(0);-->
+        <!--var l_content = content.substring(1,content.length);-->
+
+        <!--var new_content = l_content + f_content;-->
+        <!--mywel.innerText = new_content;-->
+
+    <!--}-->
+  <!--// setInterval("test();", 500);-->
+  <!--</script>-->
+  <!--============================================================-->
+    <div class="box">
+      <p id="title">
+        <span class="select">家用电器</span>
+        <span>家具</span>
+        <span>汽车</span>
+        <span>食品</span>
+        <span>女鞋</span>
+        <span>医疗保健</span>
+      </p>
+
+      <ul id="content">
+        <li class="show">
+
+          <div><img src="https://img10.360buyimg.com/n1/s450x450_jfs/t4786/325/2470647304/119102/9e1a4ed5/59005841Nd786a8df.jpg" alt="冰箱"><a href="#">容声(Ronshen)冰箱</a><span>价格:5600</span></div>
+          <div><img src="https://img12.360buyimg.com/n1/s450x450_jfs/t3037/347/1290968859/201366/7c1028a0/57c00194N9d0a54c6.jpg" alt="洗衣机"><a href="#">海尔洗衣机</a><span>价格:5400</span></div>
+          <div><img src="https://img11.360buyimg.com/n1/jfs/t3289/128/2393835119/236360/af1d283b/57e0f300N53dde603.jpg" alt="电饭煲"><a href="#">福库(CUCKOO)电饭煲</a><span>价格:3999</span></div>
+          <div><img src="https://img13.360buyimg.com/n1/jfs/t3235/137/2361713777/152258/a6908440/57e098c2N44a90a5d.jpg" alt="智能电视"><a href="#">三星智能电视</a><span>价格:8999</span></div>
+          <div><img src="https://img10.360buyimg.com/n1/jfs/t2053/101/1391591157/215066/572e131b/5696ee9bN2376492d.jpg" alt="净水器"><a href="#">净水器</a><span>价格:1300</span></div>
+          <div><img src="https://img14.360buyimg.com/n1/jfs/t3175/78/2357430273/262835/9a8e7f65/57e0a3e9Nbda39dd2.jpg" alt="空气净化器"><a href="#">空气净化器</a><span>价格:5300</span></div>
+
+        </li>
+        <li>
+          <div><img src="https://img12.360buyimg.com/n1/jfs/t1948/172/2877517581/556924/682eb107/56f63dc8Naddf77e5.jpg" alt="沙发"><a href="#">沙发</a><span>价格:2900</span></div>
+          <div><img src="https://img12.360buyimg.com/n1/jfs/t1948/172/2877517581/556924/682eb107/56f63dc8Naddf77e5.jpg" alt="沙发"><a href="#">沙发</a><span>价格:2900</span></div>
+          <div><img src="https://img12.360buyimg.com/n1/jfs/t1948/172/2877517581/556924/682eb107/56f63dc8Naddf77e5.jpg" alt="沙发"><a href="#">沙发</a><span>价格:2900</span></div>
+          <div><img src="https://img12.360buyimg.com/n1/jfs/t1948/172/2877517581/556924/682eb107/56f63dc8Naddf77e5.jpg" alt="沙发"><a href="#">沙发</a><span>价格:2900</span></div>
+          <div><img src="https://img12.360buyimg.com/n1/jfs/t1948/172/2877517581/556924/682eb107/56f63dc8Naddf77e5.jpg" alt="沙发"><a href="#">沙发</a><span>价格:2900</span></div>
+          <div><img src="https://img12.360buyimg.com/n1/jfs/t1948/172/2877517581/556924/682eb107/56f63dc8Naddf77e5.jpg" alt="沙发"><a href="#">沙发</a><span>价格:2900</span></div>
+
+        </li>
+        <li>
+          <div><img src="http://img11.360buyimg.com/n1/jfs/t4969/76/45396935/144539/347153d4/58d9cff4N36872ad6.jpg" alt="长安汽车"><a href="#">长安汽车</a><span>价格:12900</span></div>
+          <div><img src="http://img11.360buyimg.com/n1/jfs/t4969/76/45396935/144539/347153d4/58d9cff4N36872ad6.jpg" alt="长安汽车"><a href="#">长安汽车</a><span>价格:12900</span></div>
+          <div><img src="http://img11.360buyimg.com/n1/jfs/t4969/76/45396935/144539/347153d4/58d9cff4N36872ad6.jpg" alt="长安汽车"><a href="#">长安汽车</a><span>价格:12900</span></div>
+          <div><img src="http://img11.360buyimg.com/n1/jfs/t4969/76/45396935/144539/347153d4/58d9cff4N36872ad6.jpg" alt="长安汽车"><a href="#">长安汽车</a><span>价格:12900</span></div>
+          <div><img src="http://img11.360buyimg.com/n1/jfs/t4969/76/45396935/144539/347153d4/58d9cff4N36872ad6.jpg" alt="长安汽车"><a href="#">长安汽车</a><span>价格:12900</span></div>
+          <div><img src="http://img11.360buyimg.com/n1/jfs/t4969/76/45396935/144539/347153d4/58d9cff4N36872ad6.jpg" alt="长安汽车"><a href="#">长安汽车</a><span>价格:12900</span></div>
+
+        </li>
+        <li>
+          <div><img src="https://img14.360buyimg.com/n1/jfs/t4414/110/2582917360/207971/b7e129ad/58f0ee1fN94425de1.jpg" alt="嘉兴粽子"><a href="#">嘉兴粽子</a><span>价格:1</span></div>
+          <div><img src="https://img14.360buyimg.com/n1/jfs/t4414/110/2582917360/207971/b7e129ad/58f0ee1fN94425de1.jpg" alt="嘉兴粽子"><a href="#">嘉兴粽子</a><span>价格:1</span></div>
+          <div><img src="https://img14.360buyimg.com/n1/jfs/t4414/110/2582917360/207971/b7e129ad/58f0ee1fN94425de1.jpg" alt="嘉兴粽子"><a href="#">嘉兴粽子</a><span>价格:1</span></div>
+          <div><img src="https://img14.360buyimg.com/n1/jfs/t4414/110/2582917360/207971/b7e129ad/58f0ee1fN94425de1.jpg" alt="嘉兴粽子"><a href="#">嘉兴粽子</a><span>价格:1</span></div>
+          <div><img src="https://img14.360buyimg.com/n1/jfs/t4414/110/2582917360/207971/b7e129ad/58f0ee1fN94425de1.jpg" alt="嘉兴粽子"><a href="#">嘉兴粽子</a><span>价格:1</span></div>
+          <div><img src="https://img14.360buyimg.com/n1/jfs/t4414/110/2582917360/207971/b7e129ad/58f0ee1fN94425de1.jpg" alt="嘉兴粽子"><a href="#">嘉兴粽子</a><span>价格:1</span></div>
+
+        </li>
+        <li>
+          <div><img src="https://img14.360buyimg.com/n1/jfs/t3079/298/5759209435/92674/14818594/587f1c33N53e5d2a9.jpg" alt="星期六"><a href="#">星期六</a><span>价格:439</span></div>
+          <div><img src="https://img14.360buyimg.com/n1/jfs/t3079/298/5759209435/92674/14818594/587f1c33N53e5d2a9.jpg" alt="星期六"><a href="#">星期六</a><span>价格:439</span></div>
+          <div><img src="https://img14.360buyimg.com/n1/jfs/t3079/298/5759209435/92674/14818594/587f1c33N53e5d2a9.jpg" alt="星期六"><a href="#">星期六</a><span>价格:439</span></div>
+          <div><img src="https://img14.360buyimg.com/n1/jfs/t3079/298/5759209435/92674/14818594/587f1c33N53e5d2a9.jpg" alt="星期六"><a href="#">星期六</a><span>价格:439</span></div>
+          <div><img src="https://img14.360buyimg.com/n1/jfs/t3079/298/5759209435/92674/14818594/587f1c33N53e5d2a9.jpg" alt="星期六"><a href="#">星期六</a><span>价格:439</span></div>
+          <div><img src="https://img14.360buyimg.com/n1/jfs/t3079/298/5759209435/92674/14818594/587f1c33N53e5d2a9.jpg" alt="星期六"><a href="#">星期六</a><span>价格:439</span></div>
+
+        </li>
+        <li>
+          <div><img src="https://img12.360buyimg.com/n1/jfs/t5755/127/1139389729/356866/99d4e869/5923e410Nb2983f70.jpg" alt="汇仁 肾宝片"><a href="#">汇仁 肾宝片</a><span>价格:322</span></div>
+          <div><img src="https://img12.360buyimg.com/n1/jfs/t5755/127/1139389729/356866/99d4e869/5923e410Nb2983f70.jpg" alt="汇仁 肾宝片"><a href="#">汇仁 肾宝片</a><span>价格:322</span></div>
+          <div><img src="https://img12.360buyimg.com/n1/jfs/t5755/127/1139389729/356866/99d4e869/5923e410Nb2983f70.jpg" alt="汇仁 肾宝片"><a href="#">汇仁 肾宝片</a><span>价格:322</span></div>
+          <div><img src="https://img12.360buyimg.com/n1/jfs/t5755/127/1139389729/356866/99d4e869/5923e410Nb2983f70.jpg" alt="汇仁 肾宝片"><a href="#">汇仁 肾宝片</a><span>价格:322</span></div>
+          <div><img src="https://img12.360buyimg.com/n1/jfs/t5755/127/1139389729/356866/99d4e869/5923e410Nb2983f70.jpg" alt="汇仁 肾宝片"><a href="#">汇仁 肾宝片</a><span>价格:322</span></div>
+          <div><img src="https://img12.360buyimg.com/n1/jfs/t5755/127/1139389729/356866/99d4e869/5923e410Nb2983f70.jpg" alt="汇仁 肾宝片"><a href="#">汇仁 肾宝片</a><span>价格:322</span></div>
+
+        </li>
+      </ul>
+    </div>
+
+  <script>
+    // var spans = document.getElementsByTagName("span");
+    // alert(spans.length);
+    var spans = document.getElementById("title").children;
+    var lis = document.getElementsByTagName("li");
+    alert(spans.length);
+    for (i = 0; i < spans.length; i++) {
+        // alert(titles[i].innerHTML);
+        //下面不能直接用i作为索引值，先赋值给index
+        spans[i].index = i;
+        spans[i].onclick = function () {
+            // alert(titles[i].innerHTML);
+            //改变选中span的样式
+            spans[this.index].className = "select";
+            for (k = 0; k < spans.length; k++) {
+                if (this.index != k) {
+                    spans[k].className = ""
+                }
+            }
+            //改变选中span对应图片列表的显示方式
+            // lis[0].classList.remove("show");
+            lis[this.index].className = "show";
+            for (j = 0; j < lis.length; j++) {
+                if (this.index != j) {
+                    lis[j].className = ""
+                }
+            }
+        }
+    }
+  </script>
+</body>
+</html>
+</body>
+</html>

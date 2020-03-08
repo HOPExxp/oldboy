@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>css选择器</title>
+</head>
+<style>
+    /*<!--1.标签选择器-->*/
+    body{
+        /*字体颜色*/
+        color: red;
+        /*背景颜色*/
+        background-color: aqua;
+    }
+    #bb{
+        color: greenyellow;
+    }
+    .lv{
+        color: aliceblue;
+    }
+    .big{
+        font-size: 40px;
+    }
+    .line {
+        text-decoration: underline;
+    }
+</style>
+<body>
+    <!--id选择器-->
+    <h1 id="bb">这是一个特殊的一级标题</h1>
+    <h1>这是一个普通一级标题</h1>
+    <!--类选择器 -- ***公共类***-->
+    <h2 class="lv big">这是一个普通一级标题</h2>
+    <h2 class="lv line">这是一个普通一级标题</h2>
+    <h2 class="line big">这是一个普通一级标题</h2>
+    <!--id一般存在js中,css尽可能使用class即可-->
+</body>
+</html>

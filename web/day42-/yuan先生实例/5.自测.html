@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>select移动</title>
+    <style>
+        /**{*/
+            /*padding: 0;*/
+            /*margin: 0;*/
+        /*}*/
+        .outer{
+            /*padding: 5% 0 30%;*/
+            padding-bottom: 500px;
+            margin: 5% 10%;
+            background-color: #0e90d2;
+        }
+        #left{
+            /*float: left;*/
+            display: inline-block;
+            text-align: center;
+            background-color: #336699;
+            height: 140px;
+            width: 100px;
+        }
+        span{
+            /*float: left;*/
+            display: inline-block;
+            height: 140px;
+            /*width: 40px;*/
+            padding: 0 6px;
+            vertical-align: top;
+        }
+        button{
+            margin-top: 30px;
+            /*margin-bottom: 40px;*/
+        }
+        #right{
+            /*float: left;*/
+            display: inline-block;
+            text-align: center;
+            background-color: #336699;
+            height: 140px;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+
+    <select multiple="multiple" size="10" id="left">
+        <option>红楼梦</option>
+        <option>西游记</option>
+        <option>水浒传</option>
+        <option>JinPingMei</option>
+        <option>三国演义</option>
+    </select>
+
+    <span id="choice">
+        <button id="choose_move"> &nbsp;&nbsp;> </button><br>
+        <button id="all_move"> >> </button>
+    </span>
+
+    <select size="10" id="right">
+        <option>放风筝的人</option>
+    </select>
+
+    </div>
+    <script>
+        // var bts = document.getElementsByTagName("button");
+        // var sls = document.getElementsByTagName("select");
+        // for (i = 0; i < bts.length; i++) {
+        //     bts[i].onclick = function () {
+        //         for (j=0;j<sls.length;j++){
+        //             var ots = sls[j].childNodes;
+        //             for (k in ots) {
+        //                 alert(k);
+        //             }
+        //         }
+        //     }
+        // }
+        var choose_move = document.getElementById("choose_move");
+        var all_move = document.getElementById("all_move");
+
+        var left = document.getElementById("left");
+        var right = document.getElementById("right");
+        var options = left.options;
+
+        choose_move.onclick = function () {
+            for (i = 0; i < options.length; i++) {
+                option1 = options[i];
+                if (option1.selected == true) {
+                    right.appendChild(option1);
+
+                    i--
+                }
+            }
+        };
+        all_move.onclick = function () {
+            for (j = 0; j < options.length; j++) {
+                option2 = options[j];
+                right.appendChild(option2);
+                j--
+            }
+        }
+    </script>
+</body>
+</html>

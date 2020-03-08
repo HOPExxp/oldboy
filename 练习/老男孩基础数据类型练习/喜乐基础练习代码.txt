@@ -1,0 +1,40 @@
+while True:
+    value = input("股票查询接口>>")
+    filename = "1111"
+    with open(filename, "r",encoding="utf-8") as f:
+        list = []
+        while True:
+            for m in f.readlines():
+                list.append(m.strip().split(","))
+            break
+        number = 0
+        try:
+            if (">") in value:
+                res = value.split(">")
+                idx = list[0].index(res[0])
+                num1 = 0
+                for i in list:
+                    if i[idx] > res[1]:
+                        print(i)
+                        num1 += 1
+                print("找到%s条"% (num1-1))
+            elif ("<") in value:
+                res = value.split("<")
+                idx = list[0].index(res[0])
+                num2 = 0
+                for i in list:
+                    if i[idx] < res[1]:
+                        print(i)
+                        num2 += 1
+                print("找到%s条" % (num2-1))
+            else:
+                print(value)
+                for i in list:
+                    for every in i:
+                        if value in every:
+                            print(i)
+                            number += 1
+                print("找到%s条"% (number))
+        except ValueError as e:
+            print(e)
+

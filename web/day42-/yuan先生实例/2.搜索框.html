@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+<script>
+
+//获得焦点时，清空框内原有的内容
+function Focus(){
+
+    var input=document.getElementById("ID1");
+    if (input.value=="请输入用户名"){
+        input.value="";
+    }
+
+}
+
+//失去焦点时，判断是否有有效的输入值
+function Blurs(){
+
+    var ele=document.getElementById("ID1");
+    var val=ele.value;
+    if(!val.trim()){
+
+        ele.value="请输入用户名";
+    }
+}
+
+</script>
+</head>
+<body>
+    <input id="ID1" type="text" value="请输入用户名" onblur="Blurs()" onfocus="Focus()">
+</body>
+</html>

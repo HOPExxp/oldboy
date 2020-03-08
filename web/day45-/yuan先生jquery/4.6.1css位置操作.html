@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>css位置操作</title>
+    <style>
+        .test1{
+            width: 200px;
+            height: 200px;
+            background-color: wheat;
+        }
+    </style>
+</head>
+<body>
+
+
+<h1>this is offset</h1>
+<div class="test1"></div>
+<p></p>
+<button>change</button>
+</body>
+<script src="jquery.min.js"></script>
+<script>
+    // offset() 方法返回或设置匹配元素相对于文档的偏移（位置）
+    var $offset=$(".test1").offset();
+    var lefts=$offset.left;
+    var tops=$offset.top;
+
+    $("p").text("Top:"+tops+" Left:"+lefts);
+    $("button").click(function(){
+        $(".test1").offset({left:200,top:400});
+    })
+</script>
+</html>

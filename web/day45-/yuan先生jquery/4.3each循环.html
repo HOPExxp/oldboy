@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>each循环</title>
+</head>
+<body>
+    <table border="1" width="400" style="border-collapse: collapse;border-color: greenyellow" bgcolor=""
+    dir="ltr">
+        <!--表格标题-->
+        <caption>人物介绍</caption>
+        <!--tr的属性: dir设置内容的排列方式,默认为左边 ; bgcolor - 这一行的背景颜色 ; height - 这一行的高度,宽度不可设
+        align - 这一行的内容水平排列方式(left ,center ,right) ; valign - 这一行的内容垂直排列方式 (top , middle ,bottom)-->
+        <tr dir="ltr">
+            <!--td 可以设置宽度,不能设置高度-->
+            <th>小马哥</th>
+            <td>18</td>
+            <td>男</td>
+            <td rowspan="3">中国</td>
+        </tr>
+        <!--合并操作,向下向左??????????合并,不够行就有多少占多少-->
+        <tr>
+            <th>小岳岳</th>
+            <td >45</td>
+            <td>男</td>
+            <!--横向合并,数字为占据几个单元格,只要在一个tr标签中删掉一个元素-->
+            <!--<td>河南</td>-->
+        </tr>
+
+        <tr>
+            <!--th相当于td + b 加粗的单元格-->
+            <th>邓紫棋</th>
+            <td>23</td>
+            <td>女</td>
+            <!--纵向合并,在每一个tr标签中都要删掉一个元素,数字为多少删多少-->
+            <!--<td>香港</td>-->
+        </tr>
+        <!--thead,tbody,tfoot标签-->
+    </table>
+    <script src="jquery.min.js"></script>
+    <script>
+        //例1
+        li=[10,20,30,40,50,60,70];
+        dic={name:"yuan",sex:"male"};
+        $.each(li,function(i,x){
+            console.log(i,x)
+        });
+        //例2
+        $("tr").each(function(){
+            console.log($(this).html())
+        })
+    </script>
+</body>
+</html>

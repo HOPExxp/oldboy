@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .test{
+
+            width: 200px;
+            height: 200px;
+            background-color: wheat;
+
+        }
+    </style>
+</head>
+<body>
+
+
+<div class="test"></div>
+</body>
+<script src="jquery.min.js"></script>
+<script>
+//    function enter(){
+//        console.log("enter")
+//    }
+//    function out(){
+//        console.log("out")
+//    }
+// $(".test").hover(enter,out)
+
+
+$(".test").mouseenter(function(){
+        console.log("enter")
+});
+
+$(".test").mouseleave(function(){
+        console.log("leave")
+    });
+
+</script>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BOM-location</title>
+</head>
+<body>
+    <div>
+        hahaha,点我吧
+    </div>
+<script>
+    //location相当于浏览器地址栏，可以将url解析成独立的片段
+
+    //==================1.href属性，
+    // ======1.1指定某操作后地址栏的网址，实现跳转功能
+    // var div = document.getElementsByTagName("div")[0];
+    // div.onclick = function () {
+    //     location.href = "http://www.baidu.com";
+    //     //点击div时，地址栏的网址换，跳转到指定链接
+    //     // window.open("http://www.baidu.com","_blank");
+    //     // 方式二
+    // };
+
+    //======1.2指定时间后自动跳转
+    //如访问一个不存在的网页时，超出响应时间后自动跳转至指定页面
+    // setTimeout(function () {
+    //     location.href = "http://www.baidu.com";
+    // }, 5000);
+
+    //==================2.location对象的方法
+    //reload方法  --  重新加载即刷新页面
+    // setTimeout(function () {
+    //     //三秒刷新一次
+    //     window.location.reload();
+    //     // console.log("每3秒刷新一次")
+    // },3000)
+
+</script>
+</body>
+</html>

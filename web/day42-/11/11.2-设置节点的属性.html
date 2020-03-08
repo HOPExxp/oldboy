@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>设置节点属性</title>
+</head>
+<script>
+    // 重点：先加载元素节点
+    window.onload = function () {
+        // 获取属性
+        var mynode = document.getElementById('a1');
+        console.log(mynode.getAttribute('src'));
+        console.log(mynode.getAttribute('class'));
+        console.log(mynode.getAttribute('title'));
+        console.log('--------------');
+
+        // 设置属性值
+        mynode.src = 'https://hbimg.huabanimg.com/32078ea11783a1d40c2229e4ea368231c50ba22c1601d-t9hOGV_fw658';
+        mynode.className = 'image-box1';
+        mynode.title  = '花瓣图片';
+        //推荐用法
+        // mynode.setAttribute('src','https://hbimg.huabanimg.com/32078ea11783a1d40c2229e4ea368231c50ba22c1601d-t9hOGV_fw658');
+        // mynode.setAttribute('class','image-box2');
+        // mynode.setAttribute('title','花瓣美图');
+        console.log(mynode['src']);
+        console.log(mynode['className']);
+        console.log(mynode['title']);
+
+        // 删除节点的属性
+        // mynode.removeAttribute('title');
+    }
+
+</script>
+<body>
+    <img src="https://hbimg.huabanimg.com/950430f778cb2128c25ea8262c8e37c8f21aca4bb4f3-chlzQm_fw658"
+         alt="地铁一瞥" class="image-box" title="美女图片" id="a1">
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <input type="text" id="t1"/>
+
+    <script type="text/javascript">
+
+        var ele=document.getElementById("t1");
+
+        ele.onkeydown=function(e){
+
+            e=e||window.event;
+
+            var keynum=e.keyCode
+            var keychar=String.fromCharCode(keynum);
+
+            alert(keynum+'----->'+keychar);
+
+        };
+
+    </script>
+</body>
+</html>
